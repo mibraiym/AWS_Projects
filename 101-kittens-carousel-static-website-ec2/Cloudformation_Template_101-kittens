@@ -33,7 +33,7 @@ Resources:
       InstanceType: !Ref InstanceType
       Tags: 
        - Key: Name
-         Value: 'Kittens'
+         Value: 'Web Server of Project101'
       SecurityGroups:
         - !Ref InstanceSecurityGroup
       KeyName: !Ref KeyName

@@ -25,7 +25,7 @@ Parameters:
     Description: Image ID
     Type: String
     Default: ami-08f3d892de259504d
-
+    
 Resources:
   EC2Instance:
     Type: 'AWS::EC2::Instance'
@@ -33,7 +33,7 @@ Resources:
       InstanceType: !Ref InstanceType
       Tags: 
        - Key: Name
-         Value: 'Web Server of Project101'
+         Value: !Sub 'Web Server of ${AWS::StackName}'
       SecurityGroups:
         - !Ref InstanceSecurityGroup
       KeyName: !Ref KeyName
